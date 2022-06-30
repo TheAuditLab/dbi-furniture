@@ -1,0 +1,33 @@
+#rightAlignedImageTextBlock{
+    padding-top: 60px; 
+    padding-bottom: 20px;
+
+    .container{
+        .text-block{
+            padding-right: 3%;
+
+            @media (max-width: 768px){
+                padding-bottom: 30px;
+                padding-right: calc(var(--bs-gutter-x) * .5);
+            }
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    h3{
+        color: #000000;
+        padding-bottom: 12px;
+    }
+
+    p{
+        padding-bottom: 8px;
+        font-size: 15px !important;
+        @media screen and (min-width: 768px) {
+            max-width: 520px;
+        }
+    }
+
+}

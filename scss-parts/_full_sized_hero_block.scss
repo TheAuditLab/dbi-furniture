@@ -1,0 +1,38 @@
+#fullSizedHeroBlock{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,0.4);
+    height: 600px;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    padding: 10px;
+    text-align: center;
+
+    @media (max-width: 767px){
+        height: 570px;
+    }
+
+    h1{
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    p{
+        color: #ffffff;
+        padding: 0 25%;
+
+        @media (max-width: 1024px){
+            padding: 0 22%;
+        }
+        @media (max-width: 768px){
+            padding: 0 20%;
+        }
+        @media (max-width: 767px){
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+#leftAlignedImageTextBlock{
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+    h1, h2, h3, h5 {
+        font-family: CircularStdBook !important;
+        font-weight: 200;
+    }
+
+    p {
+        font-size: 16px !important;
+    }
+
+    .container{
+        .text-block{
+            padding-left: 3%;
+
+            @media (max-width: 768px){
+                padding-top: 30px;
+                padding-left: calc(var(--bs-gutter-x) * .5);
+            }
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    h3{
+        color: #000000;
+        padding-bottom: 12px;
+    }
+
+    p{
+        padding-bottom: 8px;
+    }
+}

@@ -1,0 +1,158 @@
+#services_page {
+  overflow: hidden;
+  
+  h1,h2,h3,h4,h5 {
+    font-family: "CircularStdBook", Arial, Helvetica, sans-serif!important;
+  }
+  
+  h2 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 25px;
+  }
+
+  .hero-image {
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      background: rgba(0, 0, 0, 0.4);
+      min-height: 100%;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .title {
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      font-size: 100px;
+      color: #ffffff;
+    }
+
+    .arrow {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      animation-name: slideUp;
+      animation-duration: 1s;
+    }
+
+    @keyframes slideUp {
+      0% {
+        bottom: -30px;
+      }
+      70% {
+        bottom: 40px;
+      }
+      80% {
+        bottom: 20px;
+      }
+      90% {
+        bottom: 35px;
+      }
+      100% {
+        bottom: 30px;
+      }
+    }
+  }
+
+  .text-content {
+    margin: 80px 0;
+    padding: 0px 15%;
+    line-height: 1.5;
+  }
+
+  .image_row {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 25px solid #ffffff;
+    min-height: 500px;
+  }
+
+  .text_row {
+    padding: 10%;
+    text-align: center;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 25px solid #ffffff;
+    min-height: 500px;
+
+    h2 {
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    a {
+      color: #c36;
+      text-decoration: none;
+
+      &:hover {
+        color: #336;
+      }
+    }
+  }
+  .contact-form {
+    background: #c36;
+    padding: 50px 20px;
+    margin-bottom: 100px;
+
+    @media screen and (min-width: 768px) {
+      padding: 50px 100px;
+    }
+
+    label,
+    input,
+    textarea {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    label {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    input {
+      height: 45px;
+    }
+
+    textarea {
+      resize: none;
+      height: 180px;
+    }
+
+    .wpcf7-submit {
+      display: inline-block;
+      width: unset;
+      line-height: 1;
+      padding: 0 80px;
+      background: #000000;
+    }
+  }
+
+  .contact-title {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: #000000;
+    font-weight: 300;
+    padding: 30px 0 50px 0;
+    line-height: 1.6;
+    font-family: "CircularStdBook", Arial, Helvetica, sans-serif!important;
+  }
+}

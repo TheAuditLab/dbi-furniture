@@ -1,0 +1,62 @@
+#plainTextBoxGeneralBlock{
+    position: relative;
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h1, h2, h3, h5 {
+        font-family: CircularStdBook !important;
+        font-weight: 200;
+    }
+    
+    h2, blockquote{
+        color: #000000;
+        line-height: 1.2;
+
+        @media (max-width:1024px){
+            font-size: 35px;
+        }
+        @media (max-width:767px){
+            font-size: 24px;
+        }
+    }
+
+    blockquote{
+        border-left: 0 solid #ccc;
+
+        &:before{
+            content: '“';
+            color: #000000;
+            font-size: 50px;
+        }
+
+        &:before{
+            position: relative;
+            top: 55px;
+            right: 0px;
+
+            @media (max-width: 1024px){
+                top: 35px;
+            }
+        }
+
+        h1,h2,h3,h4,h5,h6,p{
+            &:after{
+                content: '“';
+                color: #000000;
+                font-size: 50px;
+                
+                transform: rotate(180deg);
+                position: absolute;
+                right: 0%;
+                bottom: 60px;
+                font-weight: normal;
+    
+                @media (max-width: 1024px){
+                    right: 0;
+                }
+            }
+        }
+
+    }
+}
