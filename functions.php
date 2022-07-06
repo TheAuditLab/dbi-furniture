@@ -569,7 +569,7 @@ add_action( 'woocommerce_sidebar', 'woocom_singlie_prod_category_template_blocks
 // Change the Number of WooCommerce Products Displayed Per Page
 function product_pagination_by_category() {
   if( is_product_category() )
-      $limit = 9;
+      $limit = 100;
 
   return $limit;
 }
