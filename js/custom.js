@@ -100,8 +100,17 @@ jQuery(document).ready(function($) {
     }    
 
     // moving price under SKU 
-    jQuery(".product_totals").insertAfter(".sku_wrapper");
+    jQuery(".product_totals").insertAfter(".price .exclude-prod-vat");
+    jQuery( ".formattedTotalPrice" ).after( "<small>(Incl VAT)</small>" );
 
+//    //hiding dropdown on select
+//    jQuery(".gfield_radio .gchoice").click(function() {
+//         jQuery(".ginput_container .gfield_radio").hide();
+//    });
+
+//    jQuery(".ginput_container_select").click(function() {
+//     jQuery(".ginput_container .gfield_radio").toggle();
+//    })
 // ---- Document ready END
 });
 

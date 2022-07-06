@@ -3360,6 +3360,55 @@ table.shop_table .woocommerce-button {
   width: 100%;
 }
 
+.single-product .product_totals .gfield, .single-product .product_totals .gfield label {
+  display: none;
+}
+
+.single-product .including-prod-vat {
+  display: none;
+}
+
+.single-product .gfield:nth-child(3) {
+  display: block;
+}
+
+.single-product #including-prod-vat text, .single-product .gform_footer {
+  display: none;
+}
+
+.single-product .gfield_radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.single-product .gfield_radio .gchoice {
+  width: 20%;
+}
+
+.single-product .ginput_container_select .gfield_select {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.single-product .ginput_container_text input {
+  min-width: 60%;
+  min-height: 100px;
+  padding: 0 20px !important;
+  border-radius: 15px;
+}
+
+.single-product .formattedTotalPrice {
+  margin-top: 50px;
+  color: var(--pink);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "CircularStdBold", Arial, Helvetica, sans-serif;
+}
+
 #productSingleTemplateCs h1, #productSingleTemplateCs h2, #productSingleTemplateCs h3, #productSingleTemplateCs h4, #productSingleTemplateCs h5 {
   color: #000000;
   font-family: "CircularStdBook", Arial, Helvetica, sans-serif;
@@ -3450,10 +3499,10 @@ table.shop_table .woocommerce-button {
 #productSingleTemplateCs .single_add_to_cart_button {
   font-family: "CircularSTDBook", Arial, Helvetica, sans-serif;
   margin-top: 20px;
-  width: 80%;
+  width: 60%;
   display: block;
   background: var(--pink);
-  padding: 15px 40px;
+  padding: 20px 40px;
   font-size: 18px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -3613,6 +3662,10 @@ table.shop_table .woocommerce-button {
 
 #productSingleTemplateCs .woocommerce-product-gallery__image img {
   height: 500px;
+}
+
+#productSingleTemplateCs .up-sells {
+  display: none;
 }
 
 .woo-related-products-container {
@@ -4096,6 +4149,10 @@ table.shop_table .woocommerce-button {
 .term-description p {
   font-size: 22px;
   line-height: 1.8 !important;
+}
+
+.page-numbers {
+  display: none !important;
 }
 
 #fullSizedHeroBlock {
