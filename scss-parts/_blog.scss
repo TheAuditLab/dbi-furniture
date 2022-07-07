@@ -124,10 +124,9 @@
       }
     }
     .img-title {
-      position: absolute;
+      // position: absolute;
       display: flex;
       top: 70px;
-      padding: 0 30px;
       text-align: center;
       color: white;
       text-decoration: none;
@@ -140,6 +139,9 @@
       &:hover {
         color: #ffffff;
         text-decoration: underline;
+      }
+      p {
+        display: none;
       }
     }
   }

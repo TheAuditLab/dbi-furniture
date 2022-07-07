@@ -49,6 +49,12 @@
         font-weight: bold;
         font-family: "CircularStdBold", Arial, Helvetica, sans-serif;
     }
+    .woo-related-products-container 
+    {
+        .price, .product_type_simple {
+            display: none !important;
+        }
+    }
 }
 #productSingleTemplateCs{
 
@@ -306,6 +312,8 @@
 
     .woocommerce-product-gallery__image img {
         height: 500px;
+        width: 500px;
+        margin: 0 auto;
     }
     .up-sells { 
         display: none;

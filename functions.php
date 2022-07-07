@@ -209,36 +209,15 @@ function is_blog () {
 }
 // -------------------------- Product Sub categories menus
 
-function sub_cat_new_in() {
+
+function sub_cat_office_chairs_seating() {
   register_nav_menus(
     array(
-      'sub-cat-new-in' => __( 'Sub Category New In' )
+      'sub-cat-office-chairs-seating' => __( 'Sub Category Office Chairs Seating' )
     )
   );
 }
-add_action( 'init', 'sub_cat_new_in' );
-
-//
-
-function sub_cat_home_office() {
-  register_nav_menus(
-    array(
-      'sub-cat-home-office' => __( 'Sub Category Home Office' )
-    )
-  );
-}
-add_action( 'init', 'sub_cat_home_office' );
-
-//
-
-function sub_cat_office_seating() {
-  register_nav_menus(
-    array(
-      'sub-cat-office-seating' => __( 'Sub Category Office Seating' )
-    )
-  );
-}
-add_action( 'init', 'sub_cat_office_seating' );
+add_action( 'init', 'sub_cat_office_chairs_seating' );
 
 //
 
@@ -253,14 +232,14 @@ add_action( 'init', 'sub_cat_soft_seating' );
 
 // 
 
-function sub_cat_tables() {
+function sub_cat_office_tables() {
   register_nav_menus(
     array(
-      'sub-cat-tables' => __( 'Sub Category Tables' )
+      'sub-cat-office-tables' => __( 'Sub Category Office Tables' )
     )
   );
 }
-add_action( 'init', 'sub_cat_tables' );
+add_action( 'init', 'sub_cat_office_tables' );
 
 //
 
@@ -297,25 +276,25 @@ add_action( 'init', 'sub_cat_screens' );
 
 //
 
-function sub_cat_pods() {
+function sub_cat_office_pods() {
   register_nav_menus(
     array(
-      'sub-cat-pods' => __( 'Sub Category Pods' )
+      'sub-cat-office-pods' => __( 'Sub Category Office Pods' )
     )
   );
 }
-add_action( 'init', 'sub_cat_pods' );
+add_action( 'init', 'sub_cat_office_pods' );
 
 //
 
-function sub_cat_accessories() {
+function sub_cat_office_equipment_accessories() {
   register_nav_menus(
     array(
-      'sub-cat-accessories' => __( 'Sub Category Accessories' )
+      'sub-cat-office-equipment-accessories' => __( 'Sub Category Office Equipment Accessories' )
     )
   );
 }
-add_action( 'init', 'sub_cat_accessories' );
+add_action( 'init', 'sub_cat_office_equipment_accessories' );
 
 //
 
@@ -497,9 +476,9 @@ function woocom_single_prod_social($post_id){
   $my_post['ID'] = $post_id;
 
   // ACF
-  $product_social_icon_1 = get_field("product_social_icon_1", 27);
-  $product_social_icon_2 = get_field("product_social_icon_2", 27);
-  $product_social_icon_3 = get_field("product_social_icon_3", 27);
+  $product_social_icon_1 = get_field("product_social_icon_1", 31510);
+  $product_social_icon_2 = get_field("product_social_icon_2", 31510);
+  $product_social_icon_3 = get_field("product_social_icon_3", 31510);
 
   if ( get_post_type( ) == 'product') {
 

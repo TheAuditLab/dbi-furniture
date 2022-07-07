@@ -16,8 +16,12 @@
         width: 100%;
     }
     article {
-        width: 30%;
+        width: 100%;
         padding: 3%;
+        margin: 0;
+        @media screen and (min-width: 768px) {
+            width: 30%;
+        }
     }
     .image {
         min-height: 300px;
@@ -31,10 +35,21 @@
         text-align: center;
 
         a {
-            text-decoration: none;
+            display: none;
         }
     }
     .img-title {
-        display: none;
+        text-align: center;
+        text-decoration: none;
+        display: flex !important;
+        flex-direction: column;
+
+        img {
+            height: 250px;
+            width: 250px;
+            margin: 0 auto;
+            object-fit: cover;
+            padding-bottom: 20px;
+        }
     }
 }

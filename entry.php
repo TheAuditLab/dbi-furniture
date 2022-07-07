@@ -2,8 +2,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
 <header>
 <div class="title-div">
-    <div class="image" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"> 
-        <a class="img-title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
+    <div > 
+        <a class="img-title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+        <img src="<?php the_post_thumbnail_url(); ?>">
+        <p><?php the_title(); ?></p></a>
     </div>
     <?php if ( !is_singular() ) {
         echo '<div class="blog-post">';

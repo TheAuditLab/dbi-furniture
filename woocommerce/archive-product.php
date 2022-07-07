@@ -59,8 +59,9 @@ echo '</div>';
 							'link_after' => '</span>' ) ); 
 					}
 					else if(has_term(34, 'product_cat')) {
+						var_dump(has_term(34, 'product_cat'));
 						wp_nav_menu( array( 
-							'theme_location' => 'sub-cat-office-seating', 'link_before' => '<span itemprop="name">', 
+							'theme_location' => 'sub-cat-office-chairs-seating', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
 					else if(has_term(35, 'product_cat')) {
@@ -68,9 +69,9 @@ echo '</div>';
 							'theme_location' => 'sub-cat-soft-seating', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
-					else if(has_term(36, 'product_cat')) {
+					else if(has_term(140, 'product_cat')) {
 						wp_nav_menu( array( 
-							'theme_location' => 'sub-cat-tables', 'link_before' => '<span itemprop="name">', 
+							'theme_location' => 'sub-cat-office-tables', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
 					else if(has_term(37, 'product_cat')) {
@@ -88,14 +89,14 @@ echo '</div>';
 							'theme_location' => 'sub-cat-screens', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
-					else if(has_term(40, 'product_cat')) {
+					else if(has_term(93, 'product_cat')) {
 						wp_nav_menu( array( 
-							'theme_location' => 'sub-cat-pods', 'link_before' => '<span itemprop="name">', 
+							'theme_location' => 'sub-cat-office-pods', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
-					else if(has_term(41, 'product_cat')) {
+					else if(has_term(83, 'product_cat')) {
 						wp_nav_menu( array( 
-							'theme_location' => 'sub-cat-accessories', 'link_before' => '<span itemprop="name">', 
+							'theme_location' => 'sub-cat-office-equipment-accessories', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
 					else if(has_term(42, 'product_cat')) {
