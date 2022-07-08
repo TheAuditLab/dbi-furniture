@@ -15,9 +15,6 @@
             display: none;
         }
     }
-    .including-prod-vat {
-        display: none;
-    }
     .gfield:nth-child(3) {
         display: block;
     }
@@ -51,9 +48,9 @@
     }
     .woo-related-products-container 
     {
-        .price, .product_type_simple {
-            display: none !important;
-        }
+        // .price, .product_type_simple {
+        //     display: none !important;
+        // }
     }
 }
 #productSingleTemplateCs{

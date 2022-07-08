@@ -2,7 +2,6 @@
 jQuery(document).ready(function($) {
     jQuery(".woocommerce-product-details__short-description").insertBefore(".woo-related-products-container ");
 
-
     // Homepage hero slider
     $('.homepage-hero-main-slider').slick({
         slidesToShow: 1,

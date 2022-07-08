@@ -3366,10 +3366,6 @@ table.shop_table .woocommerce-button {
   display: none;
 }
 
-.single-product .including-prod-vat {
-  display: none;
-}
-
 .single-product .gfield:nth-child(3) {
   display: block;
 }
@@ -3409,10 +3405,6 @@ table.shop_table .woocommerce-button {
   font-size: 20px;
   font-weight: bold;
   font-family: "CircularStdBold", Arial, Helvetica, sans-serif;
-}
-
-.single-product .woo-related-products-container .price, .single-product .woo-related-products-container .product_type_simple {
-  display: none !important;
 }
 
 #productSingleTemplateCs h1, #productSingleTemplateCs h2, #productSingleTemplateCs h3, #productSingleTemplateCs h4, #productSingleTemplateCs h5 {

@@ -209,6 +209,15 @@ function is_blog () {
 }
 // -------------------------- Product Sub categories menus
 
+function sub_cat_office_seating() {
+  register_nav_menus(
+    array(
+      'sub-cat-office-seating' => __( 'Sub Category Office Seating' )
+    )
+  );
+}
+add_action( 'init', 'sub_cat_office_seating' );
+
 
 function sub_cat_office_chairs_seating() {
   register_nav_menus(
@@ -375,7 +384,6 @@ function edit_price_display($price, $instance) {
   if (is_shop() || is_product_category()){
     global $product;
     setlocale(LC_MONETARY,"en_GB");
-
     $price = $product->price;
     $price_excl_tax = round($price/(1.2), 2);
     $price_excl_tax = number_format($price_excl_tax, 2, ".", ".");
@@ -401,6 +409,7 @@ function edit_price_display($price, $instance) {
   else{
     global $product;
     setlocale(LC_MONETARY,"en_GB");
+    // echo $product;
 
     $price = $product->price;
     $price_excl_tax = round($price/(1.2), 2);
@@ -570,3 +579,4 @@ if(class_exists('WooCommerce')){
   add_theme_support( 'wc-product-gallery-lightbox' );
   add_theme_support( 'wc-product-gallery-slider' );
 }
+
