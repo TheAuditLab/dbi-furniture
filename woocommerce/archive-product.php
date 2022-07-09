@@ -61,7 +61,7 @@ echo '</div>';
 					else if(has_term(34, 'product_cat')) {
 						var_dump(get_the_category($post_id));
 						wp_nav_menu( array( 
-							'theme_location' => 'sub-cat-office-chairs-seating', 'link_before' => '<span itemprop="name">', 
+							'theme_location' => 'sub-cat-office-seating', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
 					else if(has_term(92, 'product_cat')) {

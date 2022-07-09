@@ -48,9 +48,16 @@
     }
     .woo-related-products-container 
     {
-        // .price, .product_type_simple {
-        //     display: none !important;
-        // }
+        .price, .product_type_simple {
+            display: none !important;
+        }
+    }
+    .thwvsf-drop-color {
+        border-radius: 50%;
+    }
+    span.thwvsf-drop-label {
+        font-family: inherit;
+        font-size: inherit;
     }
 }
 #productSingleTemplateCs{
