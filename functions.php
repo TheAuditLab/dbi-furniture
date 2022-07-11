@@ -241,14 +241,14 @@ add_action( 'init', 'sub_cat_soft_seating' );
 
 // 
 
-function sub_cat_office_tables() {
+function sub_cat_tables() {
   register_nav_menus(
     array(
-      'sub-cat-office-tables' => __( 'Sub Category Office Tables' )
+      'sub-cat-tables' => __( 'Sub Category Tables' )
     )
   );
 }
-add_action( 'init', 'sub_cat_office_tables' );
+add_action( 'init', 'sub_cat_tables' );
 
 //
 
@@ -288,11 +288,11 @@ add_action( 'init', 'sub_cat_screens' );
 function sub_cat_office_pods() {
   register_nav_menus(
     array(
-      'sub-cat-office-pods' => __( 'Sub Category Office Pods' )
+      'sub-cat-pods' => __( 'Sub Category Pods' )
     )
   );
 }
-add_action( 'init', 'sub_cat_office_pods' );
+add_action( 'init', 'sub_cat_pods' );
 
 //
 
@@ -337,6 +337,17 @@ function sub_cat_clearance() {
   );
 }
 add_action( 'init', 'sub_cat_clearance' );
+
+//
+
+function sub_cat_shop() {
+  register_nav_menus(
+    array(
+      'sub-cat-shop' => __( 'Sub Category Shop' )
+    )
+  );
+}
+add_action( 'init', 'sub_cat_shop' );
 
 //
 
@@ -449,7 +460,7 @@ function woocommerce_products_loop(){
     global $product;
 
     // Set Your shop time zone (http://php.net/manual/en/timezones.php)
-    date_default_timezone_set('Europe/Paris');
+    date_default_timezone_set('	Europe/London');
 
     $is_week_days  = in_array( date('w'), array( 1, 2, 3, 4 ) ) ? true : false; // From Monday to Thursday
     $is_friday     = date('w') == 5 ? true : false; // Friday
@@ -472,6 +483,7 @@ function woocommerce_products_loop(){
     }
 
     // Dynamic text Output based on date and time
+    var_dump($displayed_day);
     echo '<div class="deliveryline"><p>' . __("<strong>Express Delivery</strong> <br> From ", "woocommerce") . $displayed_day .
         ' ' . __(" ", "woocommerce") . '</p> <p class="arrow"></p> </div>';
 }
@@ -580,3 +592,10 @@ if(class_exists('WooCommerce')){
   add_theme_support( 'wc-product-gallery-slider' );
 }
 
+
+function my_custom_mime_types( $mimes ) {
+  $mimes['csv'] = 'text/csv';
+  unset( $mimes['exe'] );
+   return $mimes;
+  }
+  add_filter( 'upload_mimes', 'my_custom_mime_types' );

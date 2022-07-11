@@ -48,6 +48,8 @@ echo '</div>';
 			<div class="row">
 				<?php 
 					// If product category ID then
+					// var_dump(get_the_terms( $post->ID, 'product_cat' ));
+
 					if(has_term(32, 'product_cat')) {
 						wp_nav_menu( array( 
 							'theme_location' => 'sub-cat-new-in', 'link_before' => '<span itemprop="name">', 
@@ -58,29 +60,18 @@ echo '</div>';
 							'theme_location' => 'sub-cat-home-office', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
-					else if(has_term(34, 'product_cat')) {
-						var_dump(get_the_category($post_id));
+					else if(has_term(469, 'product_cat')) {
 						wp_nav_menu( array( 
 							'theme_location' => 'sub-cat-office-seating', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
-					else if(has_term(92, 'product_cat')) {
-						var_dump(get_the_category());
-						wp_nav_menu( array( 
-							'theme_location' => 'sub-cat-office-chairs-seating', 'link_before' => '<span itemprop="name">', 
-							'link_after' => '</span>' ) ); 
-					}
+
 					else if(has_term(35, 'product_cat')) {
 						wp_nav_menu( array( 
 							'theme_location' => 'sub-cat-soft-seating', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
-					else if(has_term(140, 'product_cat')) {
-						wp_nav_menu( array( 
-							'theme_location' => 'sub-cat-office-tables', 'link_before' => '<span itemprop="name">', 
-							'link_after' => '</span>' ) ); 
-					}
-					else if(has_term(37, 'product_cat')) {
+					else if(has_term(109, 'product_cat')) {
 						wp_nav_menu( array( 
 							'theme_location' => 'sub-cat-desking', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
@@ -96,6 +87,7 @@ echo '</div>';
 							'link_after' => '</span>' ) ); 
 					}
 					else if(has_term(93, 'product_cat')) {
+						has_term(93, 'product_cat');
 						wp_nav_menu( array( 
 							'theme_location' => 'sub-cat-office-pods', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
@@ -118,6 +110,11 @@ echo '</div>';
 					else if(has_term(44, 'product_cat')) {
 						wp_nav_menu( array( 
 							'theme_location' => 'sub-cat-clearance', 'link_before' => '<span itemprop="name">', 
+							'link_after' => '</span>' ) ); 
+					}
+					else if(has_term(140, 'product_cat')) {
+						wp_nav_menu( array( 
+							'theme_location' => 'sub-cat-tables', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
 					else{

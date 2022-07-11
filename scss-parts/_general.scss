@@ -847,6 +847,16 @@ a{
     }
 }
 
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    .nav-links div {
+        padding: 0 50px;
+    }
+}
+
 .woocommerce-error{
     position: relative;
     width: 90%;
