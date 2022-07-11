@@ -483,7 +483,6 @@ function woocommerce_products_loop(){
     }
 
     // Dynamic text Output based on date and time
-    var_dump($displayed_day);
     echo '<div class="deliveryline"><p>' . __("<strong>Express Delivery</strong> <br> From ", "woocommerce") . $displayed_day .
         ' ' . __(" ", "woocommerce") . '</p> <p class="arrow"></p> </div>';
 }
