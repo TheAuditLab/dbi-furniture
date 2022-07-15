@@ -222,6 +222,9 @@
   .description {
     padding-left: 30px;
   }
+  .single-post {
+    display: none;
+  }
   .title-div {
     background-color: #9c9c9c;
     min-height: 400px;
@@ -229,6 +232,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+    img {
+      display: none;
+    }
 
     @media screen and (min-width: 768px) {
       min-height: 600px;

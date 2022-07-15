@@ -285,7 +285,7 @@ add_action( 'init', 'sub_cat_screens' );
 
 //
 
-function sub_cat_office_pods() {
+function sub_cat_pods() {
   register_nav_menus(
     array(
       'sub-cat-pods' => __( 'Sub Category Pods' )
@@ -296,14 +296,14 @@ add_action( 'init', 'sub_cat_pods' );
 
 //
 
-function sub_cat_office_equipment_accessories() {
+function sub_cat_office_accessories() {
   register_nav_menus(
     array(
-      'sub-cat-office-equipment-accessories' => __( 'Sub Category Office Equipment Accessories' )
+      'sub-cat-office-accessories' => __( 'Sub Category Office Accessories' )
     )
   );
 }
-add_action( 'init', 'sub_cat_office_equipment_accessories' );
+add_action( 'init', 'sub_cat_office_accessories' );
 
 //
 
@@ -340,16 +340,6 @@ add_action( 'init', 'sub_cat_clearance' );
 
 //
 
-function sub_cat_shop() {
-  register_nav_menus(
-    array(
-      'sub-cat-shop' => __( 'Sub Category Shop' )
-    )
-  );
-}
-add_action( 'init', 'sub_cat_shop' );
-
-//
 
 
 // ---------------- Woocommerce Reload cart on action with ajax
@@ -454,6 +444,11 @@ function meta_prod_reorder() {
 }
 add_action( 'init', 'meta_prod_reorder' );
 
+// ------ Product desc order
+function desc_reorder() {
+  add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_excerpt', 30 );
+}
+
 
 // --------- Estimated dynamic delivery dates
 function woocommerce_products_loop(){
@@ -526,11 +521,8 @@ function woocom_single_prod_custom_desc($post_id){
     echo "<section id='prodCustomDescColumns'>
             <div class='container'>
               <div class='row'>
-                <div class='col-12 col-lg-6'>
+                <div class='col-12'>
                   " . $single_product_custom_description_column_1 . " 
-                </div>
-                <div class='col-12 col-lg-6'>
-                  " . $single_product_custom_description_column_2 . " 
                 </div>
               </div>
             </div>

@@ -7,6 +7,12 @@
 #productCategoryTopSection{
     padding-bottom: 30px;
 
+    .menu-image-title-after.menu-image-title {
+        padding: 0 5px 0;
+        line-height: 1.6;
+        font-size: 12px !important;
+    }
+
     h1{
         text-align: center;
         font-size: 42px;
@@ -74,6 +80,10 @@
 
     h1, h2, h3, h4, h5{
         color: #000000;
+    }
+
+    .products .button {
+        display: none;
     }
 
     .woof_products_top_panel_ul {
@@ -161,6 +171,7 @@
             flex-basis: 30%;
             text-align: center;
             margin: 0 3px 4px 3px;
+            padding: 20px 10px;
             
             @media (max-width: 767px){
                 flex-basis: 50%;

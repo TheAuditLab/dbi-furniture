@@ -3277,6 +3277,10 @@ table.shop_table .woocommerce-button {
   padding-left: 30px;
 }
 
+.single-post .single-post {
+  display: none;
+}
+
 .single-post .title-div {
   background-color: #9c9c9c;
   min-height: 400px;
@@ -3290,6 +3294,10 @@ table.shop_table .woocommerce-button {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+
+.single-post .title-div img {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -3379,6 +3387,18 @@ table.shop_table .woocommerce-button {
   margin: 0 auto;
   line-height: 1.8;
   width: 100%;
+}
+
+.single-product .single_variation {
+  display: none !important;
+}
+
+.single-product .price {
+  display: none;
+}
+
+.single-product .price.total, .single-product .price:nth-child(1) {
+  display: block !important;
 }
 
 .single-product .product_totals .gfield, .single-product .product_totals .gfield label {
@@ -3666,6 +3686,12 @@ table.shop_table .woocommerce-button {
   color: #000000;
 }
 
+#productSingleTemplateCs #prodCustomDescColumns .row .col-12 {
+  -webkit-column-count: 2;
+          column-count: 2;
+  line-height: 2.2;
+}
+
 #productSingleTemplateCs #prodCustomDescColumns h4:after {
   display: none;
 }
@@ -3835,6 +3861,12 @@ table.shop_table .woocommerce-button {
   padding-bottom: 30px;
 }
 
+#productCategoryTopSection .menu-image-title-after.menu-image-title {
+  padding: 0 5px 0;
+  line-height: 1.6;
+  font-size: 12px !important;
+}
+
 #productCategoryTopSection h1 {
   text-align: center;
   font-size: 42px;
@@ -3921,6 +3953,10 @@ table.shop_table .woocommerce-button {
 
 #productCategoryTemplateCs h1, #productCategoryTemplateCs h2, #productCategoryTemplateCs h3, #productCategoryTemplateCs h4, #productCategoryTemplateCs h5 {
   color: #000000;
+}
+
+#productCategoryTemplateCs .products .button {
+  display: none;
 }
 
 #productCategoryTemplateCs .woof_products_top_panel_ul {
@@ -4033,6 +4069,7 @@ table.shop_table .woocommerce-button {
       flex-basis: 30%;
   text-align: center;
   margin: 0 3px 4px 3px;
+  padding: 20px 10px;
 }
 
 @media (max-width: 767px) {

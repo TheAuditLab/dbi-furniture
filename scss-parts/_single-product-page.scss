@@ -10,6 +10,15 @@
             width: 100%;
         }
     }
+    .single_variation {
+        display: none !important;
+    }
+    .price {
+        display: none;
+    }
+    .price.total,  .price:nth-child(1) {
+        display: block !important;
+    }
     .product_totals {
         .gfield, .gfield label {
             display: none;
@@ -290,6 +299,11 @@
 
         h1, h2, h3, h4, h5{
             color: #000000;
+        }
+
+        .row .col-12 {
+            column-count: 2;
+            line-height: 2.2;
         }
 
         h4{
