@@ -3383,6 +3383,10 @@ table.shop_table .woocommerce-button {
   padding: 0;
 }
 
+.single-product .title-div {
+  display: none;
+}
+
 .single-product .woocommerce-Tabs-panel p {
   margin: 0 auto;
   line-height: 1.8;
