@@ -3726,12 +3726,6 @@ table.shop_table .woocommerce-button {
   color: #000000;
 }
 
-#productSingleTemplateCs .woocommerce-product-gallery__image img {
-  height: 500px;
-  width: 500px;
-  margin: 0 auto;
-}
-
 #productSingleTemplateCs .up-sells {
   display: none;
 }

@@ -60,7 +60,7 @@ echo '</div>';
 							'theme_location' => 'sub-cat-home-office', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
 					}
-					else if(has_term(469, 'product_cat')) {
+					else if(has_term(106, 'product_cat')) {
 						wp_nav_menu( array( 
 							'theme_location' => 'sub-cat-office-seating', 'link_before' => '<span itemprop="name">', 
 							'link_after' => '</span>' ) ); 
