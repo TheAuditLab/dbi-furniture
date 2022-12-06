@@ -478,7 +478,9 @@ function woocommerce_products_loop(){
     }
 
     // Dynamic text Output based on date and time
-    echo '<div class="deliveryline"><p>' . __("<strong>Express Delivery</strong> <br> From ", "woocommerce") . $displayed_day .
+    
+    $delivery_time = get_field("delivery_time");
+    echo '<div class="deliveryline"><p>' . __("<strong>Delivery Time</strong> <br>", "woocommerce") . $delivery_time .
         ' ' . __(" ", "woocommerce") . '</p> <p class="arrow"></p> </div>';
 }
 add_action( 'woocommerce_single_product_summary', 'woocommerce_products_loop', 41 );
@@ -491,9 +493,9 @@ function woocom_single_prod_social($post_id){
   $my_post['ID'] = $post_id;
 
   // ACF
-  $product_social_icon_1 = get_field("product_social_icon_1", 31510);
-  $product_social_icon_2 = get_field("product_social_icon_2", 31510);
-  $product_social_icon_3 = get_field("product_social_icon_3", 31510);
+  $product_social_icon_1 = get_field("product_social_icon_1", 35042);
+  $product_social_icon_2 = get_field("product_social_icon_2", 35042);
+  $product_social_icon_3 = get_field("product_social_icon_3", 35042);
 
   if ( get_post_type( ) == 'product') {
 
@@ -522,7 +524,9 @@ function woocom_single_prod_custom_desc($post_id){
             <div class='container'>
               <div class='row'>
                 <div class='col-12'>
-                  " . $single_product_custom_description_column_1 . " 
+                	<p>
+                  	" . $single_product_custom_description_column_1 . " 
+                   	</p>
                 </div>
               </div>
             </div>
@@ -590,3 +594,10 @@ function my_custom_mime_types( $mimes ) {
    return $mimes;
   }
   add_filter( 'upload_mimes', 'my_custom_mime_types' );
+
+// Random ordering products
+function set_sort_order($args) {
+	$args['orderby'] = 'rand';
+	return ($args);    
+}
+add_filter('woocommerce_get_catalog_ordering_args', 'set_sort_order');

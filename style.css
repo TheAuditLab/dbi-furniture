@@ -845,6 +845,7 @@ h2.entry-title, h3.widget-title {
 :root {
   --pink: #e40f62;
   --dark-grey: #494949;
+  --light-grey: #aaaaaa;
 }
 
 #content {
@@ -1832,6 +1833,17 @@ table.shop_table .woocommerce-button {
 
 #menu-main-products-categories .current-menu-item a {
   border-bottom: 1px solid var(--pink);
+}
+
+.woocommerce-product-gallery__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.woocommerce .reset_variations {
+  font-size: 14px;
+  left: 50%;
+  position: relative;
 }
 
 .slide-link {
@@ -3393,6 +3405,15 @@ table.shop_table .woocommerce-button {
   width: 100%;
 }
 
+.single-product .thwvsf_fields .select2.select2-container {
+  width: 100% !important;
+  max-width: 280px;
+}
+
+.single-product .wpa-product-gallery-thumbs .slick-list {
+  padding: 0 !important;
+}
+
 .single-product .single_variation {
   display: none !important;
 }
@@ -3472,22 +3493,22 @@ table.shop_table .woocommerce-button {
   font-family: "CircularStdBold", Arial, Helvetica, sans-serif;
 }
 
+#productSingleTemplateCs .thwvsf_fields {
+  max-width: 55%;
+  height: 10px;
+}
+
 #productSingleTemplateCs h1 {
-  font-size: 26px;
-  width: 300px;
+  font-size: 22px;
+  max-width: 60%;
   margin-bottom: 10px;
 }
 
 #productSingleTemplateCs .wp-post-image {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   max-height: 700px;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-#productSingleTemplateCs .woocommerce-product-gallery__image {
-  padding: 10px;
-  margin-top: -20px;
 }
 
 #productSingleTemplateCs .posted_in {
@@ -3517,7 +3538,11 @@ table.shop_table .woocommerce-button {
 
 #productSingleTemplateCs .variations .label {
   display: block;
-  padding-top: 15px;
+  padding-top: 50px;
+}
+
+#productSingleTemplateCs .variations tr:first-child .label {
+  padding-top: 5px;
 }
 
 #productSingleTemplateCs .variations .value {
@@ -3578,8 +3603,27 @@ table.shop_table .woocommerce-button {
   margin-bottom: 20px;
 }
 
+#productSingleTemplateCs .select2-selection__arrow {
+  -webkit-transform: rotate(-44deg);
+          transform: rotate(-44deg);
+}
+
+#productSingleTemplateCs .select2-selection__arrow b {
+  width: 2px;
+  border-bottom: 2px solid var(--pink);
+  border-left: 2px solid var(--pink);
+  position: relative;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(90deg);
+  font-size: 0px;
+  padding: 4px;
+  left: 0;
+  top: -5px;
+  border-width: 0px 0px 2px 2px;
+}
+
 #productSingleTemplateCs .deliveryline {
-  border: 1px solid var(--dark-grey);
+  border: 1px solid var(--light-grey);
   border-radius: 10px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3588,7 +3632,8 @@ table.shop_table .woocommerce-button {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 0;
-  min-width: 300px;
+  width: 100%;
+  max-width: 280px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3598,13 +3643,14 @@ table.shop_table .woocommerce-button {
   padding: 10px 15px;
   margin: 0;
   line-height: 1.4;
+  font-size: 14px;
 }
 
 #productSingleTemplateCs .deliveryline .arrow {
   width: 5px;
   height: 5px;
-  border-bottom: 3px solid var(--pink);
-  border-left: 3px solid var(--pink);
+  border-bottom: 2px solid var(--pink);
+  border-left: 2px solid var(--pink);
   position: relative;
   -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
@@ -3719,17 +3765,13 @@ table.shop_table .woocommerce-button {
   padding: 10px 0 0;
   font-size: 15px;
   max-width: 360px;
+  line-height: 1.5;
 }
 
 #productSingleTemplateCs .sku_wrapper {
   font-size: 12px;
   color: #000000;
-}
-
-#productSingleTemplateCs .woocommerce-product-gallery__image img {
-  height: 500px;
-  width: 500px;
-  margin: 0 auto;
+  font-weight: bolder;
 }
 
 #productSingleTemplateCs .up-sells {
@@ -3823,10 +3865,10 @@ table.shop_table .woocommerce-button {
   margin: 20px auto 0 auto;
   width: 90%;
   display: block;
-  padding: 20px 40px;
+  padding: 15px 40px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 @media (max-width: 1023px) {

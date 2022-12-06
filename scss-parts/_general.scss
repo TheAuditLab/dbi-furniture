@@ -1121,3 +1121,7 @@ table.shop_table{
         border-bottom: 1px solid var(--pink);
     }
 }
+
+.woocommerce-product-gallery__image img {
+    object-fit: cover;
+}
