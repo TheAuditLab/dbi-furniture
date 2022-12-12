@@ -68,7 +68,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				 * @hooked woocommerce_single_variation - 10 Empty div for variation data.
 				 * @hooked woocommerce_single_variation_add_to_cart_button - 20 Qty and cart button.
 				 */
-				echo '<p class="variation-info">Additional Colours, Fabrics and Extras available, please contact us for further information.</p>';
+				echo '<p class="variation-info">Additional colours, fabric choices and extra options are available.</p>';
 				do_action( 'woocommerce_single_variation' );
 
 				/**

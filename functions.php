@@ -307,16 +307,6 @@ add_action( 'init', 'sub_cat_office_accessories' );
 
 //
 
-function sub_cat_reception() {
-  register_nav_menus(
-    array(
-      'sub-cat-reception' => __( 'Sub Category Reception' )
-    )
-  );
-}
-add_action( 'init', 'sub_cat_reception' );
-
-//
 
 function sub_cat_brands() {
   register_nav_menus(
@@ -329,14 +319,14 @@ add_action( 'init', 'sub_cat_brands' );
 
 //
 
-function sub_cat_clearance() {
+function sub_cat_acoustics() {
   register_nav_menus(
     array(
-      'sub-cat-clearance' => __( 'Sub Category Clearance' )
+      'sub-cat-acoustics' => __( 'Sub Category Acoustics' )
     )
   );
 }
-add_action( 'init', 'sub_cat_clearance' );
+add_action( 'init', 'sub_cat_acoustics' );
 
 //
 
