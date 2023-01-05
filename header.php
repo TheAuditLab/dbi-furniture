@@ -170,16 +170,10 @@
         <h4>Product Categories</h4>
         <?php
             wp_nav_menu( array( 
-                'theme_location' => 'main-mobile-products-cat-placement', 
+                'theme_location' => 'main-products-cat-placement', 
                 'container_class' => 'main-mobile-product-cat-menu' ) ); 
         ?>
 
-        <h4 style="margin-top: 25px;">Useful Links</h4>
-        <?php 
-            wp_nav_menu( array( 
-                'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 
-                'link_after' => '</span>' ) ); 
-        ?>
     </div>
 
     <!-- Initial -->

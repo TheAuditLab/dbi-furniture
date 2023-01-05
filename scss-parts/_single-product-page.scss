@@ -378,13 +378,16 @@
     .up-sells { 
         display: none;
     }
+
+    .summary, .product {
+        padding: 20px;
+    }
 }
 
 // -------------- Woocom plugin Related products
 .woo-related-products-container {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 
     h2{
         color: #000000;

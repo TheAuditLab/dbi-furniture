@@ -87,7 +87,9 @@ h2.entry-title, h3.widget-title{margin-top:0}
 .entry-meta, .entry-footer, .archive-meta{margin:30px 0}
 .entry-footer{clear:both}
 .entry-meta, .entry-meta a, .entry-footer, .entry-footer a, .comment-meta, .comment-meta a, .comment-author, .comment-author a{font-size:14px;color:#767676}
-
+footer {
+    padding: 20px;
+}
 .sticky{padding-bottom:60px;border-bottom:4px solid #ccc}
 .bypostauthor{}
 .post, .widget-container, .search article{margin-bottom:60px}
