@@ -845,7 +845,7 @@ h2.entry-title, h3.widget-title {
 :root {
   --pink: #e40f62;
   --dark-grey: #494949;
-  --light-grey: #aaaaaa;
+  /* --light-grey: #aaaaaa; */
 }
 
 #content {
