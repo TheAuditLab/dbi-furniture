@@ -1763,6 +1763,10 @@ table.shop_table .woocommerce-button {
   object-fit: cover;
 }
 
+.hide {
+  display: none !important;
+}
+
 .slide-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -3384,7 +3388,7 @@ table.shop_table .woocommerce-button {
 }
 
 #productSingleTemplateCs .deliveryline {
-  border: 1px solid var(--light-grey);
+  border: 1px solid #000000;
   border-radius: 10px;
   display: inline-flex;
   align-items: center;

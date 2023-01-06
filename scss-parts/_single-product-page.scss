@@ -228,7 +228,7 @@
  
 
     .deliveryline{
-        border: 1px solid var(--light-grey);
+        border: 1px solid #000000;
         border-radius: 10px;
         display: inline-flex;
         align-items: center;
@@ -237,7 +237,7 @@
         max-width: 280px;
         justify-content: space-between;
 
-        p{
+        p   {
             padding: 10px 15px;
             margin: 0;
             line-height: 1.4;

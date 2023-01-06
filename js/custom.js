@@ -106,6 +106,14 @@ jQuery(document).ready(function($) {
     jQuery(".product_totals").insertAfter(".price .exclude-prod-vat");
     jQuery( ".formattedTotalPrice" ).after( "<small>(Incl VAT)</small>" );
 
+    listItems = $(".woof_list").find("li .woof_checkbox_count").each(function(){
+        var product = $(this);
+        if (product[0].outerHTML === '<span class="woof_checkbox_count">(0)</span>') {
+            $(this).closest('li').addClass('hide');
+        }
+        // console.log(product[0].outerHTML)
+     });
+
 //    //hiding dropdown on select
 //    jQuery(".gfield_radio .gchoice").click(function() {
 //         jQuery(".ginput_container .gfield_radio").hide();
