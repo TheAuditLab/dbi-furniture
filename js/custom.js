@@ -114,6 +114,18 @@ jQuery(document).ready(function($) {
         // console.log(product[0].outerHTML)
      });
 
+     $( '.variations_form' ).on( 'found_variation', function( event, variation ) {
+        const formatter = new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          });
+        $var_price = variation.display_price;
+        $price_incl_tax = $var_price;
+        $price_excl_tax = $price_incl_tax / 1.2;
+        $(".total .incl").html("£" + formatter.format($price_incl_tax));
+        $(".total .excl").html("£" + formatter.format($price_excl_tax));
+    });
+
 //    //hiding dropdown on select
 //    jQuery(".gfield_radio .gchoice").click(function() {
 //         jQuery(".ginput_container .gfield_radio").hide();

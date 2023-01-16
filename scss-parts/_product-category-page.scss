@@ -121,6 +121,11 @@
                 margin-right: 5px;
             }
         }
+        .woocommerce-page .product {
+            @media screen and (min-width: 768px) {
+                height: 560px;
+            }
+        }
     }
 
 

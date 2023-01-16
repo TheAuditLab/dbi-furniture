@@ -1026,9 +1026,16 @@ a:hover {
 .header-top-banner div strong:not(:last-child):after {
   content: '|';
   position: relative;
-  font-size: 15px;
-  padding-left: 35px;
+  font-size: 12px;
+  padding-left: 15px;
   top: -2px;
+}
+
+@media screen and (min-width: 400px) {
+  .header-top-banner div strong:not(:last-child):after {
+    padding-left: 35px;
+    font-size: 15px;
+  }
 }
 
 .header-top-banner div strong:nth-child(3):after {
@@ -3190,10 +3197,6 @@ table.shop_table .woocommerce-button {
   display: none !important;
 }
 
-.single-product .price {
-  display: none;
-}
-
 .single-product .price.total, .single-product .price:nth-child(1) {
   display: block !important;
 }
@@ -3253,6 +3256,10 @@ table.shop_table .woocommerce-button {
   font-size: inherit;
 }
 
+.single-product .wapf--inner .price {
+  font-family: "CircularStdBold", Arial, Helvetica, sans-serif;
+}
+
 #productSingleTemplateCs h1, #productSingleTemplateCs h2, #productSingleTemplateCs h3, #productSingleTemplateCs h4, #productSingleTemplateCs h5 {
   color: #000000;
   font-family: "CircularStdBook", Arial, Helvetica, sans-serif;
@@ -3268,9 +3275,10 @@ table.shop_table .woocommerce-button {
 }
 
 #productSingleTemplateCs h1 {
-  font-size: 22px;
+  font-size: 26px;
   max-width: 60%;
   margin-bottom: 10px;
+  font-weight: 900;
 }
 
 #productSingleTemplateCs .wp-post-image {
@@ -3539,6 +3547,36 @@ table.shop_table .woocommerce-button {
   padding: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  #productSingleTemplateCs .summary, #productSingleTemplateCs .product {
+    padding: 0;
+  }
+}
+
+#productSingleTemplateCs .product_meta {
+  margin-bottom: 30px;
+}
+
+#productSingleTemplateCs .excl-price {
+  color: #000000 !important;
+  margin-bottom: 0;
+}
+
+#productSingleTemplateCs .excl-price span {
+  font-weight: 900;
+}
+
+#productSingleTemplateCs .incl-price {
+  margin-top: 0;
+  font-size: 1.75em;
+  font-weight: 900;
+}
+
+#productSingleTemplateCs small {
+  font-size: 16px;
+  font-weight: 100;
+}
+
 .woo-related-products-container {
   text-align: center;
   padding: 20px;
@@ -3776,6 +3814,12 @@ table.shop_table .woocommerce-button {
   border-radius: 15px;
   padding: 0 8px;
   margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  #productCategoryTemplateCs .woof_products_top_panel_ul .woocommerce-page .product {
+    height: 560px;
+  }
 }
 
 #productCategoryTemplateCs .woocommerce-ordering, #productCategoryTemplateCs .woocommerce-result-count {

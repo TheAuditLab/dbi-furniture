@@ -24,9 +24,7 @@
     .single_variation {
         display: none !important;
     }
-    .price {
-        display: none;
-    }
+  
     .price.total,  .price:nth-child(1) {
         display: block !important;
     }
@@ -79,6 +77,9 @@
         font-family: inherit;
         font-size: inherit;
     }
+    .wapf--inner .price {
+        font-family: "CircularStdBold", Arial, Helvetica, sans-serif;
+    }
 }
 #productSingleTemplateCs{
 
@@ -97,9 +98,10 @@
     }
     
     h1{
-        font-size: 22px;
+        font-size: 26px;
         max-width: 60%;
         margin-bottom: 10px;
+        font-weight: 900;
     }
 
     .wp-post-image{
@@ -381,6 +383,28 @@
 
     .summary, .product {
         padding: 20px;
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
+    }
+    .product_meta {
+        margin-bottom: 30px;
+    }
+    .excl-price {
+        color: #000000 !important;
+        margin-bottom: 0;
+        span {
+            font-weight: 900;
+        }
+    }
+    .incl-price {
+        margin-top: 0;
+        font-size: 1.75em;
+        font-weight: 900;
+    }
+    small {
+        font-size: 16px;
+        font-weight: 100;
     }
 }
 

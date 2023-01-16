@@ -370,52 +370,7 @@ function wcc_change_breadcrumb_delimiter( $defaults ) {
 // --------------------------------  Woocom Product Page single --------------------------------
 
 // ---------- Show Ex Vat Price
-function edit_price_display($price, $instance) {
-  // if in product category
-  if (is_shop() || is_product_category()){
-    global $product;
-    setlocale(LC_MONETARY,"en_GB");
-    $price = $product->price;
-    $price_excl_tax = round($price/(1.2), 2);
-    $price_excl_tax = number_format($price_excl_tax, 2, ".", ".");
-    $price = number_format($price, 2, ".", ".");
-    $display_price = '<span class="price">';
-    $display_price .= '<span class="amount exclude-prod-vat">from &#163; ' . $price_excl_tax .'<small class="woocommerce-price-suffix"> (Excl VAT)</small></span>';
-    $display_price .= '<br>';
-    $display_price .= '<span class="amount including-prod-vat">from &#163; ' . $price .'<small class="woocommerce-price-suffix"> </small></span>';
-    $display_price .= '</span>';
 
-    echo $display_price;
-    echo  '<div>
-            <div class="colour-swatch">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>';
-  }
-  // else
-  else{
-    global $product;
-    setlocale(LC_MONETARY,"en_GB");
-    // echo $product;
-
-    $price = $product->price;
-    $price_excl_tax = round($price/(1.2), 2);
-    $price_excl_tax = number_format($price_excl_tax, 2, ".", ".");
-    $price = number_format($price, 2, ".", ".");
-    $display_price = '<span class="price">';
-    $display_price .= '<span class="amount exclude-prod-vat">&#163; ' . $price_excl_tax .'<small class="woocommerce-price-suffix"> (Excl VAT)</small></span>';
-    $display_price .= '<br>';
-    $display_price .= '<span class="amount including-prod-vat">&#163; ' . $price .'<small class="woocommerce-price-suffix"> (Incl VAT)</small></span>';
-    $display_price .= '</span>';
-
-    echo $display_price;
-  }
-}
-add_filter('woocommerce_get_price_html', 'edit_price_display', 10, 2);
 
 // remove product description from single product pages
 // remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
@@ -591,3 +546,24 @@ function set_sort_order($args) {
 	return ($args);    
 }
 add_filter('woocommerce_get_catalog_ordering_args', 'set_sort_order');
+
+// Variation Price
+add_filter( 'woocommerce_get_price_html', 'change_variable_products_price_display', 10, 2 );
+function change_variable_products_price_display( $price, $product ) {
+
+    // Only for variable products type
+    if( ! $product->is_type('variable') ) return $price;
+
+    $prices = $product->get_variation_prices( true );
+
+    if ( empty( $prices['price'] ) )
+        return apply_filters( 'woocommerce_variable_empty_price_html', '', $product );
+
+    $min_price = current( $prices['price'] );
+    $max_price = end( $prices['price'] );
+    $prefix_html = '<span class="price-prefix">' . __('from ') . '</span>';
+
+    $prefix = $min_price !== $max_price ? $prefix_html : ''; // HERE the prefix
+
+    return apply_filters( 'woocommerce_variable_price_html', $prefix . wc_price( $min_price ) . $product->get_price_suffix(), $product );
+}

@@ -22,4 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price total' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+<?php 
+$price_incl_vat = $product->get_price();
+$price_excl_vat = $price_incl_vat / 1.2;
+?>
+<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price total excl-price' ) ); ?>"><span class="excl">£<?php echo number_format($price_excl_vat, 2); ?></span><small> (excl VAT)</small></p>
+<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price total incl-price' ) ); ?>"><span class="incl">£<?php echo number_format($price_incl_vat, 2); ?></span><small> (incl VAT)</small></p>
+
