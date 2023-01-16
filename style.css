@@ -2679,7 +2679,8 @@ table.shop_table .woocommerce-button {
   color: #000000;
   font-size: 40px;
   font-weight: 400;
-  padding-bottom: 25px;
+  padding-left: 20px;
+  margin-bottom: 0;
 }
 
 #services_page .hero-image {
@@ -2760,10 +2761,6 @@ table.shop_table .woocommerce-button {
   min-height: 500px;
 }
 
-#services_page .text_row h2 {
-  padding-bottom: 10px;
-}
-
 #services_page .text_row p {
   font-size: 16px;
 }
@@ -2827,6 +2824,91 @@ table.shop_table .woocommerce-button {
   padding: 30px 0 50px 0;
   line-height: 1.6;
   font-family: "CircularStdBook", Arial, Helvetica, sans-serif !important;
+}
+
+#services_page .accordion {
+  margin-top: 50px;
+}
+
+#services_page .accordion .accordion__header {
+  padding: 1em;
+  background-color: #ccc;
+  margin-top: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+#services_page .accordion .accordion__header div {
+  display: flex;
+  place-items: center;
+}
+
+#services_page .accordion .accordion__header img {
+  width: 50px;
+}
+
+#services_page .accordion .accordion__header > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+#services_page .accordion .accordion__header.is-active {
+  background-color: #F8F8F8;
+  color: #fff;
+}
+
+#services_page .accordion .accordion__toggle {
+  margin-left: 10px;
+  height: 3px;
+  background-color: #222;
+  width: 13px;
+  display: block;
+  position: relative;
+  flex-shrink: 1;
+  border-radius: 2px;
+}
+
+#services_page .accordion .accordion__toggle::before {
+  content: "";
+  width: 3px;
+  height: 13px;
+  display: block;
+  background-color: #222;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  border-radius: 2px;
+}
+
+#services_page .accordion .is-active .accordion__toggle {
+  background-color: #fff;
+}
+
+#services_page .accordion .is-active .accordion__toggle::before {
+  display: none;
+}
+
+#services_page .accordion .accordion__body {
+  display: none;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+#services_page .accordion .accordion__body ul {
+  column-count: 2;
+  list-style: disc;
+}
+
+#services_page .accordion .accordion__body li {
+  margin-left: 20px;
+}
+
+#services_page .accordion .accordion__body.is-active {
+  display: block;
 }
 
 .blog #content {

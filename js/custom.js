@@ -126,6 +126,17 @@ jQuery(document).ready(function($) {
         $(".total .excl").html("£" + formatter.format($price_excl_tax));
     });
 
+    // Dropdown Services Accordion
+    $('.accordion__header').click(function(e) {
+        e.preventDefault();
+        var currentIsActive = $(this).hasClass('is-active');
+        $(this).parent('.accordion').find('> *').removeClass('is-active');
+        if(currentIsActive != 1) {
+            $(this).addClass('is-active');
+            $(this).next('.accordion__body').addClass('is-active');
+        }
+    });
+
 //    //hiding dropdown on select
 //    jQuery(".gfield_radio .gchoice").click(function() {
 //         jQuery(".ginput_container .gfield_radio").hide();
