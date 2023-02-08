@@ -2680,7 +2680,7 @@ table.shop_table .woocommerce-button {
   font-size: 40px;
   font-weight: 400;
   padding-left: 20px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 #services_page .hero-image {
@@ -2772,6 +2772,18 @@ table.shop_table .woocommerce-button {
 
 #services_page .text_row a:hover {
   color: #336;
+}
+
+#services_page .text_row ul {
+  list-style: disc;
+  text-align: initial;
+  column-count: 2;
+  -webkit-font-smoothing: antialiased;
+  padding: 20px;
+}
+
+#services_page .text_row ul li {
+  padding-bottom: 10px;
 }
 
 #services_page .contact-form {
